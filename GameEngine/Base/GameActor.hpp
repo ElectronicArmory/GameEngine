@@ -28,7 +28,8 @@ public:
     
     GameActor(RenderWindow &window, String textureFilename);
 
-    void setPosition(Vector2f newPosition);
+    void setWorldPosition(Vector2f newPosition);
+    Vector2f getWorldPosition();
     
     void draw();
     
