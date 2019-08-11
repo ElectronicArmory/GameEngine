@@ -28,7 +28,7 @@ GameActor::GameActor(RenderWindow &window, String textureFilename)
     }
     
     mainSprite = Sprite(mainTexture);
-    position = Vector2f(0,0);
+    mainSprite.setPosition(0, 0);
 }
 
 
@@ -36,15 +36,13 @@ GameActor::GameActor(RenderWindow &window, String textureFilename)
 void GameActor::setWorldPosition(Vector2f newPosition)
 {
     mainSprite.setPosition(newPosition.x, newPosition.y);
-    
-    position = newPosition;
 }
 
 
 
-Vector2f GameActor::getWorldPosition()
+const Vector2f GameActor::getWorldPosition() const
 {
-    return position;
+    return mainSprite.getPosition();
 }
 
 

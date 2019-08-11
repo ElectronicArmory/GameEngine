@@ -29,7 +29,7 @@ public:
     GameActor(RenderWindow &window, String textureFilename);
 
     void setWorldPosition(Vector2f newPosition);
-    Vector2f getWorldPosition();
+    const Vector2f getWorldPosition() const;
     
     void draw();
     
