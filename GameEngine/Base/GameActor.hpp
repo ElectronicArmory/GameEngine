@@ -14,7 +14,7 @@
 
 #include <SFML/Graphics.hpp>
 
-
+#include "GameEngineMin.h"
 #include "GameActorComponent.hpp"
 
 
@@ -26,7 +26,7 @@ class GameActor
 public:
     GameActor();
     
-    GameActor(RenderWindow &window, String textureFilename);
+    GameActor(GameWorld* gameWorld, String textureFilename);
 
     void setWorldPosition(Vector2f newPosition);
     const Vector2f getWorldPosition() const;
@@ -34,6 +34,8 @@ public:
     void draw();
     
 private:
+    GameWorld* _gameWorld;
+    
     RenderWindow *context;
     
     std::vector<class GameActorComponent *>components;
@@ -44,3 +46,5 @@ private:
     Vector2f position;
 };
 #endif /* GameActor_hpp */
+
+

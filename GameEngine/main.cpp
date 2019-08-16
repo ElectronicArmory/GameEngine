@@ -15,7 +15,7 @@
 //
 
 #include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
+
 
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
@@ -24,18 +24,12 @@
 
 int main(int, char const**)
 {
-    // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
-
-    // Set the Icon
-    sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "icon.png")) {
-        return EXIT_FAILURE;
-    }
-    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+    // ------- Move to Game Instance ----------
+    GameWorld* gameWorld = GameWorld::getGameWorld();
+    //-----------------------------------------
 
     // Load a sprite to display
-    GameActor backgroundActor = GameActor(window, "cute_image.jpg");
+    GameActor backgroundActor = GameActor(gameWorld, "cute_image.jpg");
 
     // Create a graphical text to display
     sf::Font font;
@@ -45,6 +39,8 @@ int main(int, char const**)
     sf::Text text("Hello SFML", font, 50);
     text.setFillColor(sf::Color::Black);
 
+    
+    // Audio Controller -----------------------
     // Load a music to play
     sf::Music music;
     if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
@@ -53,36 +49,40 @@ int main(int, char const**)
 
     // Play the music
     music.play();
+    
+    // -----------------------------------------
+    
 
     // Start the game loop
-    while (window.isOpen())
+    sf::RenderWindow* window = gameWorld->getWindow();
+    while (window->isOpen())
     {
         // Process events
         sf::Event event;
-        while (window.pollEvent(event))
+        while (window->pollEvent(event))
         {
             // Close window: exit
             if (event.type == sf::Event::Closed) {
-                window.close();
+                window->close();
             }
 
             // Escape pressed: exit
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
-                window.close();
+                window->close();
             }
         }
 
         // Clear screen
-        window.clear();
+        window->clear();
 
         // Draw the sprite
         backgroundActor.draw();
 
         // Draw the string
-        window.draw(text);
+        window->draw(text);
 
         // Update the window
-        window.display();
+        window->display();
     }
 
     return EXIT_SUCCESS;

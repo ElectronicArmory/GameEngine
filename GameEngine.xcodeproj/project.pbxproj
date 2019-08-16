@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75637CA23065D5F000B2352 /* GameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B75637C823065D5F000B2352 /* GameWorld.cpp */; };
 		B7C1E14822FBB089006F3786 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E14722FBB089006F3786 /* ResourcePath.mm */; };
 		B7C1E14B22FBB089006F3786 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E14A22FBB089006F3786 /* main.cpp */; };
 		B7C1E14E22FBB089006F3786 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7C1E14D22FBB089006F3786 /* cute_image.jpg */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B75637C823065D5F000B2352 /* GameWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameWorld.cpp; sourceTree = "<group>"; };
+		B75637C923065D5F000B2352 /* GameWorld.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameWorld.hpp; sourceTree = "<group>"; };
 		B7C1E14222FBB089006F3786 /* GameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C1E14622FBB089006F3786 /* GameEngine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameEngine-Info.plist"; sourceTree = "<group>"; };
 		B7C1E14722FBB089006F3786 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 			children = (
 				B7C1E16B22FBB713006F3786 /* GameEngine.h */,
 				B7C1E16C22FBB739006F3786 /* GameEngineMin.h */,
+				B75637C823065D5F000B2352 /* GameWorld.cpp */,
+				B75637C923065D5F000B2352 /* GameWorld.hpp */,
 				B7C1E16D22FBBA55006F3786 /* GameInstance.cpp */,
 				B7C1E16E22FBBA55006F3786 /* GameInstance.hpp */,
 				B7C1E15A22FBB0CB006F3786 /* GameActor.cpp */,
@@ -220,6 +225,7 @@
 			files = (
 				B7C1E16F22FBBA55006F3786 /* GameInstance.cpp in Sources */,
 				B7C1E15C22FBB0CB006F3786 /* GameActor.cpp in Sources */,
+				B75637CA23065D5F000B2352 /* GameWorld.cpp in Sources */,
 				B7C1E14B22FBB089006F3786 /* main.cpp in Sources */,
 				B7C1E14822FBB089006F3786 /* ResourcePath.mm in Sources */,
 				B7C1E16222FBB0EC006F3786 /* GameActorComponent.cpp in Sources */,

@@ -8,7 +8,6 @@
 
 #include "GameActor.hpp"
 #include <string>
-#include "ResourcePath.hpp"
 
 
 
@@ -19,9 +18,9 @@ GameActor::GameActor()
 
 
 
-GameActor::GameActor(RenderWindow &window, String textureFilename)
+GameActor::GameActor(GameWorld* gameWorld, String textureFilename)
 {
-    context = &window;
+    context = gameWorld->getWindow();
     
     if (!mainTexture.loadFromFile(resourcePath() + textureFilename)) {
         return EXIT_FAILURE;

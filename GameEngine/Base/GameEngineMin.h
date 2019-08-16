@@ -9,8 +9,8 @@
 #ifndef GameEngineMin_h
 #define GameEngineMin_h
 
-#include "GameActor.hpp"
-#include "EventSystem.hpp"
-#include "PlayerController.hpp"
+#include "GameWorld.hpp"
+#include "ResourcePath.hpp"
+#include <SFML/Graphics.hpp>
 
 #endif /* GameEngineMin_h */

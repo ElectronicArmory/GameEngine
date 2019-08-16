@@ -9,6 +9,7 @@
 #ifndef Header_h
 #define Header_h
 
+#include "GameWorld.hpp"
 #include "GameActor.hpp"
 #include "EventSystem.hpp"
 #include "PlayerController.hpp"
