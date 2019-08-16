@@ -10,7 +10,7 @@
 
 
 
-GameWorld* GameWorld::_gameWorld;
+GameWorld* GameWorld::_gameWorld = nullptr;
 
 
 

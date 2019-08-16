@@ -22,10 +22,14 @@
 #include "GameEngine.h"
 
 
+GameWorld* gameWorld;
+
+
+
 int main(int, char const**)
 {
     // ------- Move to Game Instance ----------
-    GameWorld* gameWorld = GameWorld::getGameWorld();
+    gameWorld = GameWorld::getGameWorld();
     //-----------------------------------------
 
     // Load a sprite to display

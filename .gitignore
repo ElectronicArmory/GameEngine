@@ -31,3 +31,4 @@
 *.out
 *.app
 GameEngine.xcodeproj/project.xcworkspace/xcuserdata
+GameEngine.xcodeproj/xcuserdata
